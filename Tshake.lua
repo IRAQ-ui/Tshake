@@ -6619,7 +6619,7 @@ if text == 'ترتيب' and database:get('tshake:'..bot_id..'lock_geam'..msg.cha
 database:del('tshake:'..bot_id..'l:ids'..msg.chat_id_)
 katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
-faederdx1:set(tshake..'bot:klmo'..msg.chat_id_,name)
+database:set('tshake:'..bot_id..':Set_alii:'..msg.chat_id_,name)
 name = string.gsub(name,'سحور','س ر و ح')
 name = string.gsub(name,'سياره','ه ر س ي ا')
 name = string.gsub(name,'استقبال','ل ب ا ت ق س ا')
