@@ -6615,8 +6615,8 @@ return false
 end
 end
 
-if text == 'ترتيب' and faederdx1:get(tshake..'bot:lock_geam'..msg.chat_id_) then
-faederdx1:del(tshake..'bot:l:id'..msg.chat_id_)
+if text == 'ترتيب' and tshake:get(tshake..'bot:lock_geam'..msg.chat_id_) then
+tshake:del(tshake..'bot:l:id'..msg.chat_id_)
 katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
 faederdx1:set(tshake..'bot:klmo'..msg.chat_id_,name)
@@ -6661,15 +6661,15 @@ name = string.gsub(name,'انترنيت','ا ت ن ر ن ي ت')
 name = string.gsub(name,'ساحه','ح ا ه س')
 name = string.gsub(name,'جسر','ر ج س')
 faeder = '🚦⁞ اول واحد يرتبها  {'..name..'} يربح •'
-faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
 end
-if text == ''..(faederdx1:get(tshake..'bot:klmo'..msg.chat_id_) or 'لفاتع')..'' and not faederdx1:get(tshake..'bot:l:id'..msg.chat_id_) then
-if not faederdx1:get(tshake..'bot:l:id'..msg.chat_id_) then 
-faeder = '🚦⁞ انت الرابح • \n🚦⁞ للعب مره اخرى ارسل ترتيب •'
-faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
-faederdx1:incrby(tshake..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
+if text == ''..(tshake:get(tshake..'bot:klmo'..msg.chat_id_) or 'لفاتع')..'' and not tshake:get(tshake..'bot:l:id'..msg.chat_id_) then
+if not tshake:get(tshake..'bot:l:id'..msg.chat_id_) then 
+tshake = '🚦⁞ انت الرابح • \n🚦⁞ للعب مره اخرى ارسل ترتيب •'
+tshake(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
+tshake:incrby(tshake..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
-faederdx1:set(tshake..'bot:l:id'..msg.chat_id_,true)
+tshake:set(tshake..'bot:l:id'..msg.chat_id_,true)
 end
 end          
           
