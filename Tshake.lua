@@ -6659,8 +6659,8 @@ name = string.gsub(name,'حاسوب','س ا ح و ب')
 name = string.gsub(name,'انترنيت','ا ت ن ر ن ي ت')
 name = string.gsub(name,'ساحه','ح ا ه س')
 name = string.gsub(name,'جسر','ر ج س')
-faeder = '🚦⁞ اول واحد يرتبها  {'..name..'} يربح •'
-faederdx(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
+taha = '🚀¦اسرع واحد يرتبها » {'..name..'}'
+send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 end
 if text == ''..(database:get('tshake:'..bot_id..'means'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id2'..msg.chat_id_) then
 if not database:get('tshake:'..bot_id..'l:id2'..msg.chat_id_) then 
