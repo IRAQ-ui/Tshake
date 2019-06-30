@@ -6663,13 +6663,15 @@ name = string.gsub(name,'جسر','ر ج س')
 faeder = '🚦⁞ اول واحد يرتبها  {'..name..'} يربح •'
 faederdx(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
 end
-if text == ''..(tshake:get(tshake..'bot:klmo'..msg.chat_id_) or 'لفاتع')..'' and not tshake:get(tshake..'bot:l:id'..msg.chat_id_) then
-if not tshake:get(tshake..'bot:l:id'..msg.chat_id_) then 
-tshake = '🚦⁞ انت الرابح • \n🚦⁞ للعب مره اخرى ارسل ترتيب •'
-tshake(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
-tshake:incrby(tshake..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
+f text == ''..(database:get('tshake:'..bot_id..'aks'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id3'..msg.chat_id_) then
+if not database:get('tshake:'..bot_id..'l:id3'..msg.chat_id_) then 
+taha = '*👾| مبروك لقد فزت ,\n👨🏽‍💻| لعب مره اخره ارسل ترتيب ,*'
+send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
+database:incrby('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_, 1)
+database:incrby('tshake:'..bot_id..'add:numall'..msg.chat_id_..msg.sender_user_id_, 1)    
 end
-tshake:set(tshake..'bot:l:id'..msg.chat_id_,true)
+database:set('tshake:'..bot_id..'l:id3'..msg.chat_id_,true)
+ 
 end
 end          
           
