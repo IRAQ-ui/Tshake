@@ -6613,7 +6613,6 @@ send(msg.chat_id_, msg.id_, 1,TEST, 1, 'md')
 database:setex('tshake:'..bot_id.."GAME:TKMEN" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
 return false  
 end
-end
 
 if text == 'ترتيب' and database:get('tshake:'..bot_id..'lock_geam'..msg.chat_id_) then
 database:del('tshake:'..bot_id..'l:ids'..msg.chat_id_)
@@ -6663,14 +6662,14 @@ name = string.gsub(name,'جسر','ر ج س')
 faeder = '🚦⁞ اول واحد يرتبها  {'..name..'} يربح •'
 faederdx(msg.chat_id_, msg.id_, 1,tshake, 1, 'md')
 end
-f text == ''..(database:get('tshake:'..bot_id..'aks'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id3'..msg.chat_id_) then
-if not database:get('tshake:'..bot_id..'l:id3'..msg.chat_id_) then 
+if text == ''..(database:get('tshake:'..bot_id..'means'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id2'..msg.chat_id_) then
+if not database:get('tshake:'..bot_id..'l:id2'..msg.chat_id_) then 
 taha = '*👾| مبروك لقد فزت ,\n👨🏽‍💻| لعب مره اخره ارسل ترتيب ,*'
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 database:incrby('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_, 1)
 database:incrby('tshake:'..bot_id..'add:numall'..msg.chat_id_..msg.sender_user_id_, 1)    
 end
-database:set('tshake:'..bot_id..'l:id3'..msg.chat_id_,true)
+database:set('tshake:'..bot_id..'l:id2'..msg.chat_id_,true)
  
 end
 end          
