@@ -1,10 +1,5 @@
 --[[
- _____ ____  _   _    _    _  _______
-|_   _/ ___|| | | |  / \  | |/ / ____|
-  | | \___ \| |_| | / _ \ | ' /|  _|
-  | |  ___) |  _  |/ ___ \| . \| |___
-  |_| |____/|_| |_/_/   \_\_|\_\_____|
-           CH > @TSHAKETEAM
+
 --]]
 --------------------------------------
 serpent = (loadfile  "./libs/serpent.lua")()
@@ -957,9 +952,9 @@ end
 if text:match("^تحديث السورس$")  then
 send(msg.chat_id_, msg.id_, 1, '☑┇تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
-os.execute('cd libs && wget https://raw.githubusercontent.com/tshakeabas/Tshake/master/libs/utils.lua')
+os.execute('cd libs && wget https://raw.githubusercontent.com/IRAQ-ui/Tshake/master/libs/utils.lua')
 os.execute('rm -rf Tshake.lua')
-os.execute('wget https://raw.githubusercontent.com/tshakeabas/Tshake/master/Tshake.lua')
+os.execute('wget https://raw.githubusercontent.com/IRAQ-ui/Tshake/master/Tshake.lua')
 dofile('Tshake.lua')  
 os.exit()
 return false
@@ -2172,9 +2167,9 @@ end
 if text:match("^تحديث السورس$") and tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
 send(msg.chat_id_, msg.id_, 1, '☑┇تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
-os.execute('cd libs && wget https://raw.githubusercontent.com/tshakeabas/Tshake/master/libs/utils.lua')
+os.execute('cd libs && wget https://raw.githubusercontent.com/IRAQ-ui/Tshake/master/libs/utils.lua')
 os.execute('rm -rf Tshake.lua')
-os.execute('wget https://raw.githubusercontent.com/tshakeabas/Tshake/master/Tshake.lua')
+os.execute('wget https://raw.githubusercontent.com/IRAQ-ui/Tshake/master/Tshake.lua')
 dofile('Tshake.lua')  
 os.exit()
 return false
@@ -7011,18 +7006,17 @@ send(msg.chat_id_, msg.id_, 1, (h4 or text), 1, 'html')
 end
 if text:match("^اصدار$") or text:match("^الاصدار$") or text:match("^السورس$") or text:match("^سورس$") then
 local text =  [[
-👋┇اهلا بك في سورس تشاكي 
+👋┇اهلا بك في سورس العراق 
 
 🌐┇TshAkE TEAM
 
-🦁┇[قناه السورس](t.me/ZX_XX)
-📜┇[قناه شروحات سورس](http://t.me/TSHAKETEAM)
-📥┇[قناه ملفات السورس](t.me/TSHAKETEAM)
+🦁┇[قناه السورس](t.me/Ha_ssin2)
+📜┇[قناه شروحات سورس](http://t.me/Ha_ssin3)
+📥┇[مطور السورس ](t.me/Ha_ssin)
 
+🔎┇[طريقه التنصيب](https://t.me/Ha_ssin3)
 
-🔎┇[طريقه التنصيب](https://t.me/ZX_XX/648)
-
-📮┇[لـ تواصل](t.me/A_5bot)
+📮┇[لـ تواصل](t.me/Twaselto_bot)
 ]]
 send(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
