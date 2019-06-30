@@ -6615,8 +6615,8 @@ return false
 end
 end
 
-if text == 'ترتيب' and tshake:get(tshake..'bot:lock_geam'..msg.chat_id_) then
-tshake:del(tshake..'bot:l:id'..msg.chat_id_)
+if text == 'ترتيب' and database:get('tshake:'..bot_id..'lock_geam'..msg.chat_id_) then
+database:del('tshake:'..bot_id..'l:ids'..msg.chat_id_)
 katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
 faederdx1:set(tshake..'bot:klmo'..msg.chat_id_,name)
